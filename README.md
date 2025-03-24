@@ -5,6 +5,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
 - [Context Implementation](#context-implementation)
 - [Components](#components)
 - [Routing](#routing)
@@ -55,6 +56,21 @@ npm install
 - **Context API**: For state management across components.
 - **CSS**: For styling the application.
 - **JavaScript (ES6+)**: Core programming language.
+# Project Structure
+```
+├── public
+│   └── index.html               # Main HTML file
+├── src
+│   ├── context
+│   │   └── TaskContext.js       # Context API implementation for tasks
+│   ├── Pages
+│   │   ├── Home.js              # Active tasks view
+│   │   └── CompletedTasks.js    # Completed tasks view
+│   ├── App.js                   # Root component with router setup
+│   ├── index.js                 # Entry point of the application
+│   └── App.css                  # Global CSS styling
+└── package.json                 # Project metadata and dependencies
+```
 # Context Implementation
 The Context API is used to manage task state globally.
 
