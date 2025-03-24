@@ -5,14 +5,11 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
 - [Context Implementation](#context-implementation)
 - [Components](#components)
 - [Routing](#routing)
 - [Styling](#styling)
 - [How to Run](#how-to-run)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -30,15 +27,15 @@ A React-based task management application with:
 - **Add Tasks**: Input field with add button
 - **Complete Tasks**: Move items to completed list
 - **Delete Tasks**: Permanent removal from lists
-- **Dual Views**: 
-  - `/` - Active tasks
-  - `/completed` - Completed tasks
+- **Dual Views**:  
+  - `/` - Active tasks  
+  - `/completed` - Completed tasks  
 
 ### Technical Features
-- 🧭 React Router navigation
-- 🏗️ Context API state management
-- ♻️ Component-based architecture
-- 📱 Responsive CSS styling
+- 🧭 React Router navigation  
+- 🏗️ Context API state management  
+- ♻️ Component-based architecture  
+- 📱 Responsive CSS styling  
 
 ---
 
@@ -46,38 +43,18 @@ A React-based task management application with:
 ```bash
 # Clone repository
 git clone https://github.com/Umair001101/To-Do-List.git
-
+```
 # Navigate to project directory
-cd react-todo-list
+cd To-Do-List
 
 # Install dependencies
 npm install
-
-# Start development server
-npm start
-
 # Technologies Used
 - **React**: JavaScript library for building user interfaces.
 - **React Router**: For routing and navigation between pages.
 - **Context API**: For state management across components.
 - **CSS**: For styling the application.
 - **JavaScript (ES6+)**: Core programming language.
-
-# Project Structure
-
-├── public
-│   └── index.html               # Main HTML file
-├── src
-│   ├── context
-│   │   └── TaskContext.js       # Context API implementation for tasks
-│   ├── Pages
-│   │   ├── Home.js              # Active tasks view
-│   │   └── CompletedTasks.js    # Completed tasks view
-│   ├── App.js                   # Root component with router setup
-│   ├── index.js                 # Entry point of the application
-│   └── App.css                  # Global CSS styling
-└── package.json                 # Project metadata and dependencies
-
 # Context Implementation
 The Context API is used to manage task state globally.
 
@@ -133,9 +110,12 @@ cd To-Do-List
 3. Install Dependencies:
 ```bash
 npm install
-npm install react-router-dom
 ```
-4. Start Development Server:
+4. Install React Router:
+```bash
+npm install react-router-dom 
+```
+5. Start Development Server:
 ```bash
 npm start
 ```
