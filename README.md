@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# To-Do List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Context Implementation](#context-implementation)
+- [Components](#components)
+- [Routing](#routing)
+- [Styling](#styling)
+- [How to Run](#how-to-run)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Overview
+A React-based task management application with:
+- Real-time task operations (add/remove/complete)
+- Separate views for active and completed tasks
+- Persistent state management using Context API
+- Routing between different views
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+### Task Management
+- **Add Tasks**: Input field with add button
+- **Complete Tasks**: Move items to completed list
+- **Delete Tasks**: Permanent removal from lists
+- **Dual Views**: 
+  - `/` - Active tasks
+  - `/completed` - Completed tasks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technical Features
+- 🧭 React Router navigation
+- 🏗️ Context API state management
+- ♻️ Component-based architecture
+- 📱 Responsive CSS styling
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
+```bash
+# Clone repository
+git clone https://github.com/Umair001101/To-Do-List.git
 
-### `npm run build`
+# Navigate to project directory
+cd react-todo-list
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start development server
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Technologies Used
+- **React**: JavaScript library for building user interfaces.
+- **React Router**: For routing and navigation between pages.
+- **Context API**: For state management across components.
+- **CSS**: For styling the application.
+- **JavaScript (ES6+)**: Core programming language.
 
-### `npm run eject`
+# Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+├── public
+│   └── index.html               # Main HTML file
+├── src
+│   ├── context
+│   │   └── TaskContext.js       # Context API implementation for tasks
+│   ├── Pages
+│   │   ├── Home.js              # Active tasks view
+│   │   └── CompletedTasks.js    # Completed tasks view
+│   ├── App.js                   # Root component with router setup
+│   ├── index.js                 # Entry point of the application
+│   └── App.css                  # Global CSS styling
+└── package.json                 # Project metadata and dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Context Implementation
+The Context API is used to manage task state globally.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## TaskContext.js
+### State Variables:
+- `tasks`: Array holding active tasks
+- `completedTasks`: Array holding completed tasks
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Functions:
+- `addTask`: Adds new task to active tasks list
+- `removeTask`: Removes task from active tasks list
+- `completeTask`: Moves task from active to completed, then removes from active tasks
 
-## Learn More
+# Components
+## Home.js
+**Purpose**:  
+Displays active tasks and allows users to add new tasks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Features**:
+- Input field for new tasks
+- Buttons for marking tasks as completed or deleting them
+- Navigation link to view completed tasks
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## CompletedTasks.js
+**Purpose**:  
+Displays tasks that have been marked as completed
 
-### Code Splitting
+**Features**:
+- List of completed tasks
+- Message when no tasks are completed
+- Navigation link to return to Home page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Routing
+Managed using React Router with routes defined in App.js:
+- **Home Route** (`/`): Renders Home component
+- **Completed Route** (`/completed`): Renders CompletedTasks component
 
-### Analyzing the Bundle Size
+# Styling
+Managed through CSS with:
+- `App.css`: Global styling
+- `Home.css`: Home component styles
+- `CompletedTasks.css`: CompletedTasks component styles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# How to Run
+1. Clone the Repository:
+```bash
+git clone https://github.com/Umair001101/To-Do-List.git
+```
+2. Navigate to Project Directory:
+```bash
+cd To-Do-List
+```
+3. Install Dependencies:
+```bash
+npm install
+npm install react-router-dom
+```
+4. Start Development Server:
+```bash
+npm start
+```
